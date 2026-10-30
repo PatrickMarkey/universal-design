@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Basketball: Origins, Rules and Positions</title>
+<meta name="description" content="A short, accessible guide to basketball, with text adapted from Wikipedia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Merriweather:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+:root{--bg:#fff;--surface:#f4f1ec;--text:#1d1b19;--muted:#4d4843;--accent:#a8400c;--accent-ink:#fff;--line:#c9c2b8;color-scheme:light dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171513;--surface:#26221f;--text:#f1ede7;--muted:#c4bcb2;--accent:#ff9f66;--accent-ink:#171513;--line:#4a443e}}
+:root[data-theme="dark"]{--bg:#171513;--surface:#26221f;--text:#f1ede7;--muted:#c4bcb2;--accent:#ff9f66;--accent-ink:#171513;--line:#4a443e}
+html{scroll-padding-top:4rem;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--text);font:1.0625rem/1.7 "Inter",system-ui,sans-serif}
+h1,h2,h3{font-family:"Merriweather",Georgia,serif;line-height:1.25}
+a{color:var(--accent);text-underline-offset:.2em}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.material-icons{font-size:1.25em;vertical-align:-.2em;margin-inline-end:.35em}
+/* Skip navigation: CSS drop-down that appears on keyboard focus */
+.skip-nav{position:absolute;inset:0 0 auto 0;z-index:100;transform:translateY(-110%);transition:transform .2s;background:var(--accent);color:var(--accent-ink);padding:.75rem 1rem}
+.skip-nav:focus-within{transform:translateY(0)}
+.skip-nav ul{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;list-style:none;margin:0;padding:0}
+.skip-nav a{color:var(--accent-ink);font-weight:600}
+.site-header{background:var(--surface);border-bottom:1px solid var(--line);padding:1rem}
+.site-header>div,main,.site-footer>div{max-width:68rem;margin-inline:auto}
+.site-header nav ul{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;list-style:none;margin:.5rem 0 0;padding:0}
+.brand{font:700 1.25rem "Merriweather",serif;margin:0}
+main{padding:1.5rem 1rem 3rem;display:grid;gap:2rem;grid-template-columns:minmax(0,1fr)}
+@media (min-width:60rem){main{grid-template-columns:minmax(0,1fr) 18rem}}
+article{max-width:46rem}
+article h1{font-size:clamp(2rem,5vw,3rem);margin-top:0}
+.lede{font-size:1.2rem;color:var(--muted)}
+aside{align-self:start;background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:1rem 1.25rem}
+aside h2{font-size:1.15rem;margin-top:0}
+dt{font-weight:600;margin-top:.75rem}
+dd{margin:0;color:var(--muted)}
+blockquote{margin:1.5rem 0;padding:.25rem 1.25rem;border-inline-start:4px solid var(--accent);background:var(--surface)}
+blockquote footer{color:var(--muted);font-size:.95rem}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:.5rem}
+table{border-collapse:collapse;width:100%;min-width:34rem}
+caption{text-align:start;font-weight:600;padding:.75rem 1rem}
+th,td{padding:.6rem 1rem;border-top:1px solid var(--line);text-align:start}
+thead th{background:var(--surface)}
+tbody th{font-weight:600}
+tbody tr:nth-child(even){background:var(--surface)}
+figcaption{color:var(--muted);font-size:.95rem;margin-top:.5rem}
+fieldset{border:1px solid var(--line);border-radius:.5rem;margin:0 0 1.25rem;padding:1rem 1.25rem}
+legend{font-weight:600;padding-inline:.5rem}
+.field{margin-bottom:1rem}
+label{display:block;font-weight:600;margin-bottom:.25rem}
+.hint{color:var(--muted);font-size:.95rem;margin:0 0 .25rem}
+.req{color:var(--accent)}
+input[type=text],input[type=email],select,textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:2px solid var(--muted);border-radius:.4rem;padding:.6rem .75rem}
+.choice{display:flex;align-items:center;gap:.6rem;min-height:2.75rem}
+.choice label{display:inline;font-weight:400;margin:0}
+input[type=radio],input[type=checkbox]{width:1.25rem;height:1.25rem;accent-color:var(--accent)}
+button{font:600 1rem "Inter",sans-serif;background:var(--accent);color:var(--accent-ink);border:0;border-radius:.4rem;padding:.75rem 1.5rem;min-height:2.75rem;cursor:pointer}
+details{border:1px solid var(--line);border-radius:.5rem;padding:.5rem 1rem;margin:1rem 0}
+summary{cursor:pointer;font-weight:600}
+.site-footer{background:var(--surface);border-top:1px solid var(--line);padding:1.5rem 1rem;font-size:.95rem;color:var(--muted)}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.skip-nav{transition:none}}
+</style>
+</head>
+<body>
+
+<nav class="skip-nav" aria-label="Skip links">
+  <ul>
+    <li><a href="#main">Skip to main content</a></li>
+    <li><a href="#positions">Skip to positions</a></li>
+    <li><a href="#game-length">Skip to game length table</a></li>
+    <li><a href="#feedback">Skip to feedback form</a></li>
+  </ul>
+</nav>
+
+<header class="site-header">
+  <div>
+    <p class="brand"><span class="material-icons" aria-hidden="true">sports_basketball</span>Basketball Primer</p>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#positions">Positions</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <article>
+    <header>
+      <h1>Basketball</h1>
+      <p class="lede">Basketball is a team sport in which two teams of five players each (excluding substitutes) oppose one another on a rectangular court.</p>
+      <p><small>Text adapted from <a href="https://en.wikipedia.org/wiki/Basketball">Wikipedia</a>, licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</small></p>
+    </header>
+
+    <section id="overview" aria-labelledby="overview-h">
+      <h2 id="overview-h">Overview</h2>
+      <p>Players compete with the primary objective of shooting a basketball through a hoop (a basket mounted to a backboard) at each end of the court. Teams alternate between <dfn>offense</dfn> (when they attempt to score), and <dfn>defense</dfn> (when they try to prevent the opposing side from scoring). A field goal is worth two points, unless made from behind the three-point line, when it is worth three.</p>
+      <p>After a foul, timed play stops and the fouled team either takes one to three free throws worth one point each, or restarts play with an inbound pass. The team with the most points at the end of the game wins. If regulation play expires with the score tied, most basketball leagues mandate additional periods of play (overtime) until the score is no longer tied.</p>
+      <p>Players advance the ball by bouncing it while walking or running (dribbling) or by passing it to a teammate, both of which require considerable skill. On defense, they may steal the ball from a dribbler, intercept passes, or block shots.</p>
+    </section>
+
+    <section id="history" aria-labelledby="history-h">
+      <h2 id="history-h">Origins</h2>
+      <p>In <time datetime="1891-12">December 1891</time>, <b>James Naismith</b>, a Canadian-American professor of physical education and instructor at the International Young Men’s Christian Association Training School (now Springfield College) in Springfield, Massachusetts, was trying to keep his gym class active on a rainy day. He sought a vigorous indoor game to keep his students occupied and at proper levels of fitness during the long New England winters.</p>
+      <p>Naismith initially set up the peach basket with its bottom intact, which meant that the ball had to be retrieved manually after each “basket” or point scored. This quickly proved tedious, so Naismith removed the bottom of the basket to allow the balls to be poked out with a long dowel after each scored basket.</p>
+      <figure>
+        <blockquote cite="https://en.wikipedia.org/wiki/Basketball">
+          <p><q>We have a basket and a ball, and it seems to me that would be a good name for it.</q></p>
+          <footer>James Naismith, replying to Frank Mahan’s suggestion of the name <cite>basketball</cite></footer>
+        </blockquote>
+      </figure>
+      <p>The first official game was played in the YMCA gymnasium in Albany, New York, on <time datetime="1892-01-20">January 20, 1892</time>, with nine players. The game ended at 1–0. Basketball has since evolved to become one of the world’s most popular and widely viewed sports; the <abbr title="National Basketball Association">NBA</abbr> is the most significant professional league in the world in terms of popularity, salaries, talent, and level of competition.</p>
+      <p>Men’s basketball was first included at the Berlin 1936 Summer Olympics, although a demonstration tournament was held in 1904. Women’s basketball was added to the Olympics in 1976.</p>
+    </section>
+
+    <section id="rules" aria-labelledby="rules-h">
+      <h2 id="rules-h">Rules and equipment</h2>
+      <p>Measurements and time limits discussed in this section often vary among tournaments and organizations. The time allowed is actual playing time; the clock is stopped while the play is not active. Therefore, games generally take much longer to complete than the allotted game time, typically about two hours.</p>
+
+      <h3 id="game-length-h">Game length by level</h3>
+      <figure id="game-length">
+        <div class="table-wrap" role="region" aria-labelledby="game-length-cap" tabindex="0">
+          <table>
+            <caption id="game-length-cap">Playing time, half-time break and overtime length at five levels of play</caption>
+            <thead>
+              <tr>
+                <th scope="col">Level</th>
+                <th scope="col">Periods</th>
+                <th scope="col">Half-time break</th>
+                <th scope="col">Overtime period</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row"><abbr title="International Basketball Federation">FIBA</abbr></th><td>4 × 10 min</td><td>15 min</td><td>5 min</td></tr>
+              <tr><th scope="row">NBA</th><td>4 × 12 min</td><td>15 min</td><td>5 min</td></tr>
+              <tr><th scope="row">College men (<abbr title="National Collegiate Athletic Association">NCAA</abbr>)</th><td>2 × 20 min</td><td>15 min</td><td>5 min</td></tr>
+              <tr><th scope="row">College women (NCAA)</th><td>4 × 10 min</td><td>15 min</td><td>5 min</td></tr>
+              <tr><th scope="row">US high school varsity</th><td>4 × 8 min</td><td>10 min</td><td>4 min</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="4">Most US high school varsity games use 8-minute quarters; this varies from state to state.</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <figcaption>Source: Wikipedia, “Basketball”, section “Rules and regulations”.</figcaption>
+      </figure>
+
+      <h3>Court and basket</h3>
+      <p>A regulation basketball court in international games is 28 meters (92 feet) long and 15 meters (49 feet) wide. In the NBA and NCAA, the court is 94 by 50 feet. The basket is a steel rim 18 inches (46 cm) diameter with an attached net affixed to a backboard. At almost all levels of competition, the top of the rim is exactly 10 feet (3.05 meters) above the court.</p>
+
+      <h3>Violations and fouls</h3>
+      <details>
+        <summary>Ball handling violations</summary>
+        <p>There are limits placed on the steps a player may take without dribbling, which commonly results in an infraction known as <i>traveling</i>. Nor may a player stop their dribble and then resume dribbling; a dribble that touches both hands is considered stopping the dribble, giving this infraction the name <i>double dribble</i>.</p>
+      </details>
+      <details>
+        <summary>Personal and technical fouls</summary>
+        <p>An attempt to unfairly disadvantage an opponent through certain types of physical contact is illegal and is called a personal foul. There is a second category of fouls called technical fouls, which may be charged for various rules violations or for unsportsmanlike conduct.</p>
+      </details>
+    </section>
+
+    <section id="positions" aria-labelledby="positions-h">
+      <h2 id="positions-h">Playing positions</h2>
+      <p>Although the rules do not specify any positions whatsoever, they have evolved as part of basketball. Popular descriptions of positions include:</p>
+      <dl>
+        <dt>Point guard (the “1”)</dt>
+        <dd>Usually the fastest player on the team, organizes the team’s offense by controlling the ball and making sure that it gets to the right player at the right time.</dd>
+        <dt>Shooting guard (the “2”)</dt>
+        <dd>Creates a high volume of shots on offense, mainly long-ranged; and guards the opponent’s best perimeter player on defense.</dd>
+        <dt>Small forward (the “3”)</dt>
+        <dd>Often primarily responsible for scoring points via cuts to the basket and dribble penetration.</dd>
+        <dt>Power forward (the “4”)</dt>
+        <dd>Plays offensively often with their back to the basket.</dd>
+        <dt>Center (the “5”)</dt>
+        <dd>Uses height and size to score (on offense), to protect the basket closely (on defense), or to rebound.</dd>
+      </dl>
+    </section>
+
+    <section id="feedback" aria-labelledby="feedback-h">
+      <h2 id="feedback-h">Suggest a correction</h2>
+      <p>Spotted something that needs fixing? Fields marked <span class="req" aria-hidden="true">*</span> are required.</p>
+      <form action="#feedback" method="post">
+        <fieldset>
+          <legend>About you</legend>
+          <div class="field">
+            <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <p id="email-hint" class="hint">We only use this to reply to you.</p>
+            <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-hint" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>About your suggestion</legend>
+          <div class="field">
+            <label for="section">Which section?</label>
+            <select id="section" name="section">
+              <option value="overview">Overview</option>
+              <option value="history">Origins</option>
+              <option value="rules">Rules and equipment</option>
+              <option value="positions">Playing positions</option>
+            </select>
+          </div>
+          <div role="radiogroup" aria-labelledby="type-label" class="field">
+            <p id="type-label" class="hint"><strong>Type of issue</strong></p>
+            <div class="choice"><input type="radio" id="t-fact" name="type" value="fact" checked><label for="t-fact">Factual error</label></div>
+            <div class="choice"><input type="radio" id="t-typo" name="type" value="typo"><label for="t-typo">Typo or grammar</label></div>
+            <div class="choice"><input type="radio" id="t-a11y" name="type" value="a11y"><label for="t-a11y">Accessibility problem</label></div>
+          </div>
+          <div class="field">
+            <label for="details">Details <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="details" name="details" rows="5" required></textarea>
+          </div>
+          <div class="choice"><input type="checkbox" id="copy" name="copy"><label for="copy">Send me a copy of my message</label></div>
+        </fieldset>
+        <button type="submit"><span class="material-icons" aria-hidden="true">send</span>Send suggestion</button>
+      </form>
+    </section>
+  </article>
+
+  <aside aria-labelledby="facts-h">
+    <h2 id="facts-h">Quick facts</h2>
+    <dl>
+      <dt>Highest governing body</dt><dd>FIBA</dd>
+      <dt>First played</dt><dd><time datetime="1891-12-21">December 21, 1891</time>, Springfield, Massachusetts, U.S.</dd>
+      <dt>Team members</dt><dd>5 per side</dd>
+      <dt>Contact</dt><dd>Limited</dd>
+      <dt>Type</dt><dd>Indoor/Outdoor</dd>
+      <dt>Venue</dt><dd>Indoor court (mainly) or outdoor court (streetball)</dd>
+      <dt>Olympic</dt><dd>Part of the Summer Olympic program since 1936 and 3x3 basketball since 2020</dd>
+    </dl>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <div>
+    <p>Content adapted from the Wikipedia article <a href="https://en.wikipedia.org/wiki/Basketball"><cite>Basketball</cite></a> by Wikipedia contributors, available under the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 License</a>. Text was shortened and lightly edited.</p>
+    <address>Page maintained by <a href="mailto:hello@example.com">the Basketball Primer team</a>.</address>
+    <p><small>Last reviewed <time datetime="2026-10-29">October 29, 2026</time>.</small></p>
+  </div>
+</footer>
+</body>
+</html>
