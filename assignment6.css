@@ -1,0 +1,281 @@
+/* Palette adapted for an accessible Adobe Color-style navy, teal, gold, and cream scheme. */
+:root {
+  --navy: #243b53;
+  --teal: #287271;
+  --gold: #f4a261;
+  --cream: #f7f3ea;
+  --ink: #1f2933;
+  --white: #ffffff;
+  --blue: #125b79;
+  --border: #486581;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(12rem, 1fr) minmax(12rem, 1fr);
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "main left right"
+    "footer footer footer";
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  transform: translateY(-150%);
+  background: var(--white);
+  color: var(--blue);
+  border: 3px solid var(--navy);
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid #0b5fff;
+  outline-offset: 3px;
+}
+
+.site-header {
+  grid-area: header;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 0.25rem;
+}
+
+.header-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", Georgia, serif;
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0.25rem 0 0;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.35rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  grid-area: nav;
+  background: var(--teal);
+  border-radius: 0.25rem;
+}
+
+.site-nav ul {
+  min-height: 4rem;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  list-style: none;
+}
+
+.site-nav li {
+  display: flex;
+  flex: 1 1 10rem;
+}
+
+.site-nav a {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.site-nav a[aria-current="location"] {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.site-nav a:hover {
+  text-decoration-thickness: 3px;
+}
+
+.main-content {
+  grid-area: main;
+  min-width: 0;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: 0.25rem;
+}
+
+.lede {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+section {
+  max-width: 48rem;
+  margin-block: 1.5rem;
+  scroll-margin-top: 1rem;
+}
+
+.aside-left,
+.aside-right {
+  min-width: 0;
+  padding: 1.25rem;
+  border-radius: 0.25rem;
+  align-self: start;
+}
+
+.aside-left {
+  grid-area: left;
+  background: #d8ecea;
+  border: 2px solid var(--teal);
+}
+
+.aside-right {
+  grid-area: right;
+  background: #fce7d3;
+  border: 2px solid #9c4a09;
+}
+
+.aside-left li,
+.aside-right li {
+  margin-bottom: 0.65rem;
+}
+
+a {
+  color: var(--blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+.site-footer {
+  grid-area: footer;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 0.25rem;
+}
+
+.site-footer p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.site-footer a {
+  color: var(--gold);
+}
+
+@media (max-width: 56rem) {
+  body {
+    grid-template-columns: minmax(0, 1fr) minmax(12rem, 1fr);
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main main"
+      "left right"
+      "footer footer";
+  }
+
+  .site-nav ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 36rem) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "left"
+      "right"
+      "footer";
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .header-content,
+  .main-content {
+    padding: 1.25rem;
+  }
+
+  .site-nav ul {
+    min-height: auto;
+    flex-flow: column nowrap;
+  }
+
+  .site-nav li {
+    flex: 1 1 auto;
+  }
+
+  .site-nav a {
+    min-height: 48px;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
