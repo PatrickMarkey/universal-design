@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An accessible, responsive guide to universal design principles.">
+  <title>Universal Design | Responsive Layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assignment6.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">Digital accessibility practice</p>
+      <h1>Universal Design</h1>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <ul>
+      <li><a href="#principles" aria-current="location">Principles</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content" class="main-content" tabindex="-1">
+    <article>
+      <header>
+        <h2 id="principles">Design for people</h2>
+        <p class="lede">Universal design creates products and environments that are useful, understandable, and comfortable for the widest possible range of people.</p>
+      </header>
+
+      <section aria-labelledby="equitable-heading">
+        <h3 id="equitable-heading">Equitable use</h3>
+        <p>Provide the same experience whenever possible, or an equivalent experience that preserves privacy, security, and dignity. Avoid making accessibility a separate or secondary option.</p>
+      </section>
+
+      <section aria-labelledby="flexible-heading">
+        <h3 id="flexible-heading">Flexible use</h3>
+        <p>Support left- and right-handed use, different navigation preferences, changing ability, and a range of pace and precision.</p>
+      </section>
+
+      <section aria-labelledby="perceptible-heading">
+        <h3 id="perceptible-heading">Perceptible information</h3>
+        <p>Use clear language, strong contrast, text alternatives, visible labels, and ways to perceive essential information without relying on only one sense.</p>
+      </section>
+
+      <section id="process" aria-labelledby="process-heading">
+        <h3 id="process-heading">A practical process</h3>
+        <ol>
+          <li><strong>Include:</strong> involve people with disabilities throughout the project.</li>
+          <li><strong>Check:</strong> test keyboard operation, zoom, headings, links, forms, and contrast.</li>
+          <li><strong>Listen:</strong> test with assistive technologies and people using the result.</li>
+        </ol>
+      </section>
+    </article>
+  </main>
+
+  <aside class="aside-left" aria-labelledby="checklist-heading">
+    <h2 id="checklist-heading">Quick checklist</h2>
+    <ul>
+      <li>Page language is set</li>
+      <li>Headings follow a useful hierarchy</li>
+      <li>Links describe their destination</li>
+      <li>Keyboard focus remains visible</li>
+      <li>Text and interface elements have sufficient contrast</li>
+    </ul>
+  </aside>
+
+  <aside class="aside-right" aria-labelledby="resources-heading">
+    <h2 id="resources-heading">Learn more</h2>
+    <ul id="resources">
+      <li><a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">W3C accessibility introduction</a></li>
+      <li><a href="https://webaim.org/intro/">WebAIM accessibility overview</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG 2.2 quick reference</a></li>
+    </ul>
+  </aside>
+
+  <footer class="site-footer" id="contact">
+    <p>Universal Design Assignment 6</p>
+    <address>Questions: <a href="mailto:student@example.com">student@example.com</a></address>
+  </footer>
+</body>
+</html>
